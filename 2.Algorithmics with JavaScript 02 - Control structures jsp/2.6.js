@@ -1,3 +1,5 @@
+/*  */
+
 const readlineSync = require("readline-sync");
 
 let number = readlineSync.question("Give me a number between 1 and 7: ");
