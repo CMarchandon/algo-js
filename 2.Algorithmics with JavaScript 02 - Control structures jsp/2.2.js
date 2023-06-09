@@ -1,13 +1,13 @@
 const readlineSync = require("readline-sync");
 
-let minAge= readlineSync.question('Give me a age minimum');
-let maxAge= readlineSync.question('Give me a age maximum');
+let minAge= readlineSync.question('Give me a age minimum age');
+let maxAge= readlineSync.question('Give me a age maximum age');
 
 if (minAge > maxAge) {
     console.log("Error: The minimum age cannot be greater than the maximum age.");
   } 
 else {
-    let currentAge = parseInt(readlineSync.question("Your current age: "));
+    let currentAge = parseInt(readlineSync.question("Give me your current age: "));
   
     if (currentAge >= minAge && currentAge <= maxAge) {
       console.log("Congratulations, your current age is between the minimum and maximum age.");
