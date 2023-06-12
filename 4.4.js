@@ -11,11 +11,22 @@ Write a documentation for all the functions you created. */
 
 const readlineSync = require("readline-sync");
 
-**function rand10() {
+/**
+ * Generates a random number between 1 and 10.
+ *
+ * @returns {number} The randomly generated number.
+ */
+function rand10() {
   let x = Math.ceil(Math.random() * 10);
   return x;
 }
 
+/**
+ * Generates an array of random numbers between 1 and 10.
+ *
+ * @param {number} n The number of random numbers to generate.
+ * @returns {number[]} The array of random numbers.
+ */
 function multiRand(n) {
   let arr = [];
   for (let i = 0; i < n; i++) {
@@ -23,32 +34,51 @@ function multiRand(n) {
   }
   return arr;
 }
+
 let userInput = readlineSync.questionInt("Please give me a number for an array: ");
 let arr = multiRand(userInput);
 
-function average(arr){
-    let i = 0;
-    let resume = 0;
-    for (let each of arr) {
-        resume = i += each;
-    }
-    let answer = resume / arr.length ; 
-    return answer;
+/**
+ * Calculates the average of an array of numbers.
+ *
+ * @param {number[]} arr The array of numbers.
+ * @returns {number} The average value of the numbers.
+ */
+function average(arr) {
+  let sum = 0;
+  for (let num of arr) {
+    sum += num;
+  }
+  let avg = sum / arr.length;
+  return avg;
 }
 
+/**
+ * Finds the minimum element in an array of numbers.
+ *
+ * @param {number[]} arr The array of numbers.
+ * @returns {number} The minimum value in the array.
+ */
 function min(arr) {
-    let minValue = Math.min(...arr);
-    return minValue;
+  let minValue = Math.min(...arr);
+  return minValue;
 }
 
+/**
+ * Finds the maximum element in an array of numbers.
+ *
+ * @param {number[]} arr The array of numbers.
+ * @returns {number} The maximum value in the array.
+ */
 function max(arr) {
-    let maxValue = Math.max(...arr);
-    return maxValue;
+  let maxValue = Math.max(...arr);
+  return maxValue;
 }
 
 let answer = average(arr);
 let minValue = min(arr);
 let maxValue = max(arr);
 
+console.log("About your array: " + arr + ", the average number is: " + answer + ", the minimum number is: " + minValue + ", and the maximum number is: " + maxValue + ".");
 
-console.log("About your array : " + arr + " the averrage numbers are : " + answer + ", the minimum number is : " + minValue + " the maximum number is : " + maxValue + " .");
+
