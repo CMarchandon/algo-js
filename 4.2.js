@@ -8,7 +8,7 @@ You will have to search on Google how to generate random numbers in JavaScript f
 function rand10(){
 
 /*Maths floor (built in function) is for giving integer numbers; math random is for givin a random number (built-in fucntion).
-Math random will multiply 1 by a random numbers between 1 and 10. The +1 is for avoinding getting a 0.
+Math random will multiply 1 by a random numbers between 1 and 10. 
 */
     let x = Math.ceil(Math.random()*10);
    console.log(x)
