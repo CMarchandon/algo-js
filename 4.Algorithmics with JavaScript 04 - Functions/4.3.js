@@ -20,7 +20,6 @@ function multiRand(n) {
   return arr;
 }
 
-
 let userInput = readlineSync.question("Please give me a number for an array: ");
 let arr = multiRand(userInput);
 console.log(arr);
