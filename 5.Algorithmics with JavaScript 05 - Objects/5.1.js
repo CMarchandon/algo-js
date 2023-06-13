@@ -24,7 +24,6 @@ function askTvSerie() {
 
     // Create an empty array to store the cast members
     let castMembers = [];
-    let userInputCastMembers;
 
     // Prompt the user to enter cast members until they enter "q"
     do {

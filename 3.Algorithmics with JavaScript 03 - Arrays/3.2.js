@@ -12,3 +12,4 @@ for (let each of arr) {
 let answer = resume / arr.length ; 
 
 console.log(answer);
+
